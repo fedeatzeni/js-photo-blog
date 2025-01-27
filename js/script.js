@@ -1,5 +1,5 @@
-const main = document.querySelector("main"); //output
-const pin = "./img/pin.svg"; //pin
+const main = document.querySelector("main"); // output
+const pin = "./img/pin.svg"; // pin
 
 // ajax call
 axios.get("https://lanciweb.github.io/demo/api/pictures/")
@@ -7,7 +7,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
         const objs = responseObj.data;
         //console.log(objs);
 
-        //for
+        // for
         objs.forEach(element => {
             // destructuring
             const { title, date, url } = element;
@@ -24,10 +24,10 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
             `;
         });
 
-        //img opener
-        const photos = document.querySelectorAll(".photo"); // img + bordo
-        const imgOpened = document.querySelector(".big-img"); //output img
-        const display = document.querySelector(".img-opened"); //output class active
+        // img opener
+        const photos = document.querySelectorAll(".photo"); // img + bordo create dal for
+        const imgOpened = document.querySelector(".big-img"); // output img
+        const display = document.querySelector(".img-opened"); // output class active
         //console.log(photos);
 
         // aggiunge un EventListener a tutte le foto
@@ -42,7 +42,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
             })
         };
 
-        //close 
+        // close 
         const closeBtn = document.querySelector(".img-opened button");
         //console.log(closeBtn);
 

@@ -7,6 +7,7 @@
 body {
     background-image: url(../img/cork.png);
     font-family: 'Edu Tas Beginner', sans-serif;
+    position: relative;
 }
 
 
@@ -49,6 +50,7 @@ main {
     background-color: white;
     padding: 10px;
     margin-bottom: 40px;
+
 }
 
 .photo img {
@@ -64,6 +66,47 @@ main {
 .photo .title {
     font-size: 25px;
     font-weight: 700;
+}
+
+/* transition  */
+.card:hover {
+    transform: rotate(10deg);
+    transition-duration: 1s;
+}
+
+/* img open  */
+.img-opened {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    display: none;
+}
+
+.img-opened button {
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    margin: 20px auto;
+}
+
+.img-opened>div {
+    position: sticky;
+    top: 0;
+}
+
+.big-img img {
+    display: block;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+/* active */
+.active {
+    display: block;
 }
 
 /* media query  */
